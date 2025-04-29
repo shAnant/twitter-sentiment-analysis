@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import requests
 
 model_url = 'https://github.com/shAnant/twitter-sentiment-analysis/blob/921cea42f6daecb3839a9dd1ef92aee1ae955a04/finalized_model%20(1).sav'
 model_response = requests.get(model_url)
