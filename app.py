@@ -1,8 +1,8 @@
 import streamlit as st
 import pickle
 
-model = pickle.load(open('LR_model/finalized_model (1).sav', 'rb'))
-vectorizer = pickle.load(open('LR_model/vectorizer.sav', 'rb'))
+model = pickle.load(open('finalized_model (1).sav', 'rb'))
+vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
 st.set_page_config(page_title="Twitter Sentiment Analyzer", page_icon="🐦")
 
 st.title("🐦 Twitter Sentiment Analyzer")
