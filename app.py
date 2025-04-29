@@ -2,13 +2,8 @@ import streamlit as st
 import pickle
 import requests
 
-model_url = 'https://raw.githubusercontent.com/shAnant/twitter-sentiment-analysis/blob/c5ec4b54343c0e61f541bbc2016cae125b964b56/finalized_model.sav'
-model_response = requests.get(model_url)
-model = pickle.loads(model_response.content)
-
-vector_url = 'https://raw.githubusercontent.com/shAnant/twitter-sentiment-analysis/blob/c63ffff1be578ff6a0f73c612c4ca1d84dadde04/vectorizer.sav'
-vector_response = requests.get(vector_url)
-vectorizer = pickle.loads(vector_response.content)
+model = pickle.load(open('finalized_model.sav', 'rb'))
+vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
 
 st.set_page_config(page_title="Twitter Sentiment Analyzer", page_icon="🐦")
 
